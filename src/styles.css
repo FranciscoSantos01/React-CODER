@@ -1,0 +1,49 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+header{
+    background-color: black;
+    color: white;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    height: 10vh;
+}
+.Title{
+    padding: 10px;
+    
+}
+.Title h1{
+     font-size: 40px;
+}
+.navbar{
+    margin-top: 20px;
+    padding-right: 5px;
+}
+.navbar a{
+    text-decoration: none;
+    color: white;
+    padding: 10px;
+    text-transform: uppercase;
+    
+    
+}
+.navbar a:hover{
+    color: red;
+
+}
+.navbutt{
+    padding: 10px;
+}
+.navbutt button{
+    padding: 10px;
+    background-color: red;
+    color: white;
+    border-radius: 15px;
+    text-transform: uppercase;
+    font-weight: bold;
+
+}
+

@@ -1,3 +1,5 @@
+import Cart from "./Carwidget"
+
 function Header (){
     return(
         <header>
@@ -12,6 +14,7 @@ function Header (){
             </div>
             <div className="navbutt">
                 <button>Log in</button>
+                <Cart />
             </div>
         </header>
     )

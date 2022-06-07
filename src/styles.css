@@ -47,3 +47,40 @@ header{
 
 }
 
+.counter{
+    background-color: lightblue;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 10px;
+    padding: 15px;
+}
+ .counter button{
+        padding: 15px;
+        background-color: rgb(144, 0, 255);
+        width: 300px;
+        color: white;
+        font-weight: bold;
+}
+.counter button:active{
+    background-color: black;
+}
+.counter1{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+.counter1 h2{
+    margin-top: 10px;
+}
+.counter1 button{
+    padding: 7px;
+    background-color: black;
+    color: white;
+    margin: 15px ;
+    width: 60%;
+}
+.counter1 button:hover{
+    background-color: violet;
+}
+

@@ -1,10 +1,10 @@
 import Header from "./Header"
-import Item from "./Itemlistcontainer"
+import Itemlistcontainer from "./Itemlistcontainer"
 function App(){
     return(
         <>
         <Header />
-        <Item greetings= "Bienvenidos" />
+        <Itemlistcontainer greetings= "Bienvenidos" />
 
         </>
     )

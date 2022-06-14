@@ -1,5 +1,5 @@
 import {useState} from "react"
-const Itemcount = ({stock, initial, onAdd}) =>{
+const Itemcount = ({stock, initial}) =>{
     const[contador, setContador]= useState(initial)
     const aumentarcontador = () =>{
         if(contador < stock){  
@@ -19,12 +19,12 @@ const Itemcount = ({stock, initial, onAdd}) =>{
         <>
         <div className="counter">
             <div className="counter1">
-            <button onClick={aumentarcontador}>Aumentar</button>
-            <h2>Contador: {contador}</h2>
-            <button onClick={disminuircontador}>Disminuir</button>
+            <button onClick={aumentarcontador}>+</button>
+            <h2>{contador}</h2>
+            <button onClick={disminuircontador}>-</button>
             </div>
             <div>
-                <button onClick={confirmarcontador}>Agregar Stock</button>
+                <button onClick={confirmarcontador}>Agregar Carrito</button>
             </div>
         </div>
         </>

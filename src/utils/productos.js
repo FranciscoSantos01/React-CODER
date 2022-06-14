@@ -23,4 +23,13 @@ const productos = [
     }
 ]
 
+ export const producto = {
+        id:1,
+        image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRo1LcEo6dhvSAysHmP6W1N5dXvlN5g86KqGA&usqp=CAU",
+        nombre: "T-Shirt",
+        price: 20,
+        stock: 6,
+        description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur, voluptatem.",
+}
+
 export default productos

@@ -15,4 +15,6 @@ export const getProductById=(id)=>{
         }, 500)
     })
 }
+
+
 export default customFetch

@@ -1,3 +1,5 @@
+import productos from "./productos";
+
 const customFetch =(time, task) =>{
     return new Promise((resolve)=>{
         setTimeout(()=>{
@@ -6,4 +8,11 @@ const customFetch =(time, task) =>{
     })
 }
 
+export const getProductById=(id)=>{
+    return new Promise((resolve)=>{
+        setTimeout(()=>{
+            resolve(productos.find(prod=> prod.id === id));
+        }, 500)
+    })
+}
 export default customFetch

@@ -2,9 +2,10 @@ const productos = [
     {
         id:1,
         image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRo1LcEo6dhvSAysHmP6W1N5dXvlN5g86KqGA&usqp=CAU",
-        nombre: "T-Shirt",
+        nombre: "T-Shirt classic Black men Slim fit",
         price: 20,
         stock: 6,
+        category: "Remeras"
     },
     {
         id:2,
@@ -12,6 +13,7 @@ const productos = [
         nombre: "Green T-Shirt",
         price: 25,
         stock: 10,
+        category: "Remeras"
     },
     {
         id:3,
@@ -19,17 +21,65 @@ const productos = [
         nombre: "Black T-shirt",
         price: 22,
         stock: 4,
-
+        category: "Remeras"
+    },
+    {
+        id:4,
+        image: "data:image/jpeg;base64,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",
+        nombre: "Green trousers men",
+        price: 22,
+        stock: 4,
+        category: "Pantalones"
+    },
+    {
+        id:5,
+        image:"data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAkGBxAQDw8QDxAPEA4PEBAPDw8PDw8ODw8QFRUWFhUVFRUYHSggGBolGxUVITEhJSkrLi4uFx8zODMsNygtLisBCgoKDg0OGxAPFy0eHSUuLSsrKy0tLS0tLS0tLSstLS0tLSstLS0tLS0tLS0tKy0tLS0tLS0tLS0tLS0vLSsrLf/AABEIAPoAygMBIgACEQEDEQH/xAAbAAABBQEBAAAAAAAAAAAAAAACAAEDBAYFB//EAEMQAAIBAgQBCQQFCgYDAQAAAAABAgMRBBIhMQUGE0FRYXGBkbEiMqHBByNSotEUQmJjcnOCkrLCJDM04fDxFkNTFf/EABgBAQADAQAAAAAAAAAAAAAAAAACAwQB/8QAIREBAAICAwEAAwEBAAAAAAAAAAECAxEhMTJBEhMiIwT/2gAMAwEAAhEDEQA/APThDjHQhCGAQ1xDAJshxErLv0JWVcW9vFkMk6rKeON2hyKs1nlfZK5zeFU28VJ20jFz7E/dX9T8ixjZ2u+lj8E9tVajv7UlT/lV/mZsXpqy8VFjtfZjrmk33vr8AMX7EYwW/T3liqkpX6jm4uTd7bvpZsYlLFYlR03ZQlXhKV5K/UXPySK3d3uC6UX3doEfMwknlt3HOxNBwvK2nVrodH8ngndNxfYBXqu1t+jWybA4mMgqkW1uovxR6LyYpZMFhY/qoy/m9r5mAqRyyumkk72t0npPD01QpKSytU4Jx+zotDgkrVFGLk9krszMpNuc370m33HU4xVu401t70vkvX4HB4hiLKyMue2502YKaj8lLFVW5PW9jT8IouNCCe7WZ+Oq+FjP8IwXPVNfcj7U+7q8fxNayzDXXKGe++EcgQ2CXswRWHEBqRDCAQwhAMxhxgGZTxm67mW2U8c9Y9z+RXl8ysxe4ZjjFazfYhcmOJRlRcIxUXCc1vd1Ho3JedrdhxuUuKeadt7OxFQoOhQpU5Nc5KpFuzvrmzyV/C3mZaX/ABnbTlruNNPiKyb3S7ypWv0P0KtStPK9b6fnarzOY8Tmurax3yJpdD306zTGasxtlnHMOlOLfSl3gcw//pTRx69ZxhOTzexBys51LO3cwHOUurufPP8AvO/tqfhLq1Go74igu+TKtfGUo7zlL93QlKPmjnVKs47W/klb43KlbFr8+hGXU1OSa8Hp8BGSsufhLucnowxOLhGnmaouNWpmi42jfTfe7SR6DWmopt7JXZivo6cZVK9TJkk4KmvazZlFpu6slpmjbTpZ3eN43eK2jv2z6vD/AJsLXitdpUpNraUMdiXeUumWvcuheRxJ3nNLVtuyS6WyWvWlLd6s7fAeGZEqs17T9xPoT6X2malZtLXktFKrvDcGqNNR/Oes32llhMBmyI0wzO52FjCYx1whCEBpxCEAhhCAYYcZgCzn8UnZJ9UZM6DONyhqWhP92/iyvL4lbh9w89xk3UxdOCeuZS7sqzbeB0vyaTlTlN/5V8kU73k005Sb6ddvizj8AlzmMqyf/rptLvk7X+6/M00kYpnXDRfmVdyXTp8GUqVS+iuk03ZPovZb9xcxbtCUvsxb8lcpYShrqn7sVrvpcQircUhKUJRjmee0dr2TeuyLEKD6W/h+BO6aTEkuuyb1dr2R3binPDqTtZtt23e/gNW5OVWk7Uo32jOcs67+gPiXFqdJzhgY1KslrOrOLppvva0XYrk3B8zhKeJnmqaSSWiSa2XXqS1pOK1k/JzA1cJVqylKOWVPLHLJuzbjd7dUUvEs4upntrZa2/54kNbELV79CXUl1knCcJOvOK2S1nLqQ5tOlmq0ja9wPhed87UXsJ+yn+c18kaKQUYKKUYqySsl1IGRspX8Y0w3vNp2jYDDYDJIAYw7BAQhCA04hCAQwhgEMOMAxneVE3krJe9kUF3v/s0LOHxGKlKffZeGnyKc8/yv/wCeP6YPkhgctOpXfvVas6S/ZpqP905eR3Ju3TqQ0ctKEqEF/lVKs+x861Jej+BSnnWtzLbmVi3i5Jwkn02Xg2k/UFSWvac5V23LuVvMkhPWxzQuAtaESkSRkBDCmoqd9m7spPiH1qstNl1Cx2I3S29TkyleSfaTiHN6l35Rvpu2m9Nkbbg+C5mlFNe3L2p9/V4GHwNTPKnCK1qTipNaqzeyfT3no8i/DH1HPffAGRyJGAy9nRsBhsBgAwQmDYBDD2EBpRXGEAhhCAQzFcYAKsrJsyWK4ovymFHrUne6vdLMvgmanGQzU5Lps2u9anleLoSXGcKldupnyW2cnCaSfUUZY3MNWCYiJl0MM5OriJysoVJt0tfzIuUP6oy8gsTVgmk5JS6E2RxjODjCas40npe++IxHzOTxKlmlmW+xnmOXZl0q1ONsysn36FWnNNtq1utO6/5e5w8bha1VKEZOyd7ZrLxLfC/qnzDd5QSna9/Zk/k/6juuHNu5CDtcU3o11jwm8pHiHaL6yLrj4ud3ZbL4laMesNsBS112JoNTyRpp4mn+hGUvu6epu2Ybke2sXH9KjJPvSTNyzRh8qsnYWRskZHItQAwGHIBgAxh2MAhhCA0ghhAIYQwDjMQzAR5xy64FKEoYinKcJ0pKVOpB5ZRj3rpT+B6MQ4rDwqwcKkVKEt0+khau08d/xnnp5fg8XVqKPPa1aVJUXN71EpSknLt9p69O5WxUd9TV8o+EUqEozpJrnM2aN/ZVlGyS6Fv5mUxrMtomLcr9xMbhzqmIkr5WcmliHCvGo297S/Ze/wCPgX6ktd7I52Mgs0bdnkSqjLbUpaEOLdqcm92VOB4hzoq+8fZfy+BZ4hrBdSK9alL447Y0vkx5DOL17SaLe8jcJeU6v2Y82u+Vm/ReZqGcPkcvqJvrqekYncZoxx/MKb9gkBINgSLEUbAYbAYAMYdggIQhAaQQ1xXAQwmMAhmOMwGGHGA4XK6N6UH+m15xf4GAxmx6LyohfDt/ZnGXqvmec47ST7VdGTL7X08uJW328ynNXk+xfIuYrR9BWlvLuS+Igl2eTlKWWpL82Kjm7G3ZfM6GN9w6PJbDL/8ANxbt7TnBt9kbNL4vzKGMV0l4kbRzCUTw40gmtYdrQ1RakkNcvZJeoceh8jZXwcP2538zstnC5Ff6OP7c/kdts108wot2ZsCTHbAZJwzAbCYDAFgjtjAIQwgNIIQgEMIYBCEIBhhxgKPGoZsPVX6N/J3+R5jxSPs36YnqfEY3o1V+rn6M80x636mjNm9Qux9M3Wd+8rvp7ZL5k9R2fiQ29fkRhJ6jyMwafDnHpr87fsfuL4JGaqr3m+hW7jWchG/yGnf7VS3df/szPHKThOrDb6yXk3dfBolkj+ayjSeZZ6pu+8kobxX6S9R8RG2gNPdd69StJ6ByLX+Dj+3U9Tts53JullwtP9LPP+aTa+Fjos108wot2BgMNkbJOBYDCYLABjDsEBCEIDSCHEAww4wCGHEAww4gIMZ/l1P3c/6WeW46peOh6vOF009mmn4nk+MWWcoPdNxfetDPnjmFuP6ztXfxBir2738iXFxs2Q2s1JdDIQm9d5G03HA0E1a+d+DnKzOPyvor8oT+1TjJ9rTa9EjTcCmpYXDyjs6MPTX4nD5a09aMutTj5WfzZbkj/NXX0xOM94hhuu9epYxqs0VZSsUQsekclqubCwX2JTg/5m/Ro6rM/wAjZ+xXj9mqpL+Jf7GhZqpO6wpt2jYDJGRtE0QMBhsBgAwQmCAhXEMBpxg7CsAFhBWGsANhBWGsAIwdhrACeY8taPN4uo47StJ9jaTfxPT7HnnLHD3r1k9/Za8YopzdLMfbF4p31BoW2ezdu4eas2mKlH+ryKVj13krRcMDhovdQv5ybXqR8rMLnw+bppyUv4Xo/VPwLnJ7/R4a+/Mw9C5iaSnCcHtKMo+asadbrpTvVtvIuLaSiuw56d32E3Fqv1kkt1aIqNKy13MsdL5bbkVL2qq+1TpS8VdP1RqWjJ8h/fl+5T+MUa9xNOLypv2haI2idxI2ixBC0RsnkiNoCFgkskBYABBWFYDU2FYOw1gAsKwdhWAjsLKS5RWAhyiykthrARWPP+Wcv8TPsUF91M9Eseectof4qp2xg/upfIpz+VmPthsd7zfWDR+Y2JWviHQjfRb3SXeUfFj2fgdO2Fw6/U0/6US8Qrc3Rq1PsU5z8k2WqNHLCMfsxjHyVinx6nfC4hfqZ+hs6hR9eM4am5zc5dLdies3eyLtOokrZbFCrO131mJobDkIvrp/uf7oG0cTHcgI/WTf6lL70fwNs0acXlTftXcSOUSy4gOJagqyiBKJbcCOUAKjiBlLUoA5AK+UbKWMgsgGjsKw4gGsNYIa4DDMe4wDCsPYVgGseb/SA2sU2npkhfyPSTzrl7G+Jkv1dNryKc3lZj7YPEQ1udHgdO+IoLo56l4+0itVoXsdrkph82Nw0bf+2MunaHt/2lEdrJeuNFfHwvSqrrp1F5xZaGavp16G1neOTSSk3tFN/gcekszu9kdTjk2rUY73tLwdihU9hRit+kww0y3H0eL26v7qNu5tG2cTF/Rytar6oKP3rm3ZqxeVN+0LiC0SsFliCFoFolaBYETQFiVggBYbKGK3YB2xgrCynAAgsorHQFhwrCsANhWCsKwAWMDy/pWxMH0TpJeKcv8AY9BsYT6RZrnKC6oN+b/2Ks3lPH2wuKk4p6eZ3vo8lfG020k8tW3fk3M5xbEppQjvfVmn+jGnfF/sYepPxcox9GUUjmFtunp4M5KKbeyTb7kHYpcallwuIfVQq/0s1yzvGcVipSqtpXlJt912Va/+ak992XqMVTjKrP8AhXWyhg4ynOVR7t6dxjhpeh/RvDSu/wB2k/P8DaMyX0cw+qrvocoejua5o04/Ki/aNgMkaBaLEUbAbJmgWgIGwdSdoawEOo2pNYVgOvcVwLiucBXFcG4rnQVxXBuK4D3FcG4rgE2ee/SBedVOGtoKOul7Nu6vutTYY7F7pbepi+VNaUowUVJyU9cqcmoOLve3bbyM+W++IacWP7LAzws73lFm5+jKOXEVMzUb0MkYydnJ5ovRdOkWcyOAvq3l71r5HV4Pho0qtKpZycJp5pWuuh5V0aN+bIVnlO2ONcPRyjx3/S4jto1F8GXGyvjkpUqkXtKnOL8YtGqemSO3jOLwsqktfcjpGPZ1ksYKCst/Qs4ujOlrOMkutLN6FWEs8oxheUpNJJK13fQxRtpmNN99HkLYWo+l1mvBJfiads4nJXB1KFBwqRyydSUrXi9Goro7mde5rpGqwz27EwWIYmiTBY7QzQAsYdoawCEKwrAXc43OEdhWIupOcG5wjyisAfOgzxCWraQziVsbh3ODj7Gu2eKmk+uzBAcRxNx2y+MipV4o3u4/zO3oZutya4gptxr4WceqUK1KS/lll+6HDk9jX79Sku6rKXw5pFMxdfW2OPi3j+JXfvW67aGex3E4xWsku97nY/8AEqkvfxD/AII/MKHInDfnOpJ9eeUW/GNn8TkY5+pTlj4y9PiLb9mNR90JJebL2H4hNtXi7dLlKEbfG5pcFyUwdFuVOjBSl70rNuXe2zow4bQVvqqba2vCLs+zQ7+pH9y/DEZkra6LYjr1G9OheoUqiSst/Qg8TuS3xzFT7KlxLDxqQcJK91v0ozPCMGoV4tR9mnOMpPtTvlXaa6o09Fq+voRysbVjTSstXe0YrV9f/ZXHa+Z4auLTSa2eqH0KWGrLm4deSPT2Bupc1bYlrMgXNFcfmw4lc0M5gqiPzJ0LMNmC5kXNADmGuHzQuaAtZRZQxmRdBlHyhCADKC4MkBiBG4AuBOMwIHTAdItAsCvzJHViopvTRdOxbBnFPdJgYnFcscNCcqdSVJTi8slKTpfGoop+DDo8ocPNXjaS/QlGsvutnV4tw+hNe3RpT/apwl6og4PwTCZr/kuGv18xSv6Fc44WxllBHimbSnCrJ9SpzXyLNDhM6so1Kqcct8sL9at7SW/caOlTjFWilFdSSSJCUY4hy2SZU6OEUUTql3EwiapFzY/NkowEeQWVkgx0BlY1mSDABZiswxAf/9k=" ,
+        nombre: "Cacki men Trouser",
+        price: 29,
+        stock: 10,
+        category: "Pantalones"
+    },
+    {
+        id:6,
+        image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRSjP1PxcQ0MnDXSD1NuQmBp1mjTAvwW8Qqyw&usqp=CAU" ,
+        nombre: "Grey man Trouser",
+        price: 30,
+        stock: 2,
+        category: "Pantalones"
+    },
+    {
+        id:7,
+        image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS3Gxy48vDq6u0-di2tyTeMIEQ0JqK2Zloi2w&usqp=CAU" ,
+        nombre: "Men's Hoddie Black",
+        price: 30,
+        stock: 7,
+        category: "Hoodies"
+    },
+    {
+        id:8,
+        image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTcK0h090IXGpIOu0E6RDsT5tHtNeptcu0ivQ&usqp=CAU" ,
+        nombre: "Grey Hoddie",
+        price: 24,
+        stock: 6,
+        category: "Hoodies"
+    },
+    {
+        id:9,
+        image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTGjg-tq0xLVpOiKfaKpl8HMRuFaPMAezhRLg&usqp=CAU" ,
+        nombre: "Green Hoodie",
+        price: 35,
+        stock: 2,
+        category: "Hoodies"
     }
 ]
 
- export const producto = {
-        id:1,
-        image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRo1LcEo6dhvSAysHmP6W1N5dXvlN5g86KqGA&usqp=CAU",
-        nombre: "T-Shirt",
-        price: 20,
-        stock: 6,
-        description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur, voluptatem.",
+export  const getCategoryById=(category)=>{
+    return new Promise((resolve)=>{
+        setTimeout(()=>{
+            resolve(productos.filter(prod=> prod.category === category));
+        }, 500)
+    })
 }
+
 
 export default productos

@@ -1,4 +1,5 @@
 import Cart from "./Carwidget"
+import {Link} from 'react-router-dom'
 
 function Header (){
     return(
@@ -8,9 +9,10 @@ function Header (){
 
             </div>
             <div className="navbar">
-                <a href="#">Home</a>
-                <a href="#">contact</a>
-                <a href="#">About us</a>
+                <Link to='/'>Home</Link>
+                <Link to='/catalogo'>Catalogo</Link>
+                <Link to='contacto'>Contact</Link>
+                
             </div>
             <div className="navbutt">
                 <button>Log in</button>

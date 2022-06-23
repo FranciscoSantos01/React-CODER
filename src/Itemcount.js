@@ -1,5 +1,5 @@
 import {useState} from "react"
-const Itemcount = ({stock, initial}) =>{
+const Itemcount = ({stock, initial, onAdd}) =>{
     const[contador, setContador]= useState(initial)
     const aumentarcontador = () =>{
         if(contador < stock){  
@@ -12,7 +12,7 @@ const Itemcount = ({stock, initial}) =>{
         }
     }
     const confirmarcontador = () =>{
-        alert('AGREGADO AL Carrito')
+        onAdd(contador);
     }
 
     return(

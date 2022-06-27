@@ -1,14 +1,20 @@
 import React from 'react'
-import { useState } from 'react'
-import {Link} from 'react-router-dom'
+//import { useState } from 'react'
+//import {Link} from 'react-router-dom'
 import Itemcount from '../Itemcount'
+import{useContext} from 'react'
+import { Context } from '../components/Cartcontext'
 
 const Itemdetail = ({producto}) => {
-  const[cantidad,setCantidad]= useState(0)
-  const onAdd =(cantidad)=>{
-    setCantidad(cantidad);
-
+ //const[cantidad,setCantidad]= useState(0)
+ const {agregarProducto, duplicado} = useContext(Context)
+  const agregarcarrito =()=>{
+    const item = {
+      ...producto,
+    }
+    agregarProducto(item)
   }
+  
   return (
     <section class="detail">
         <img src={producto.image} alt={producto.nombre} />
@@ -21,9 +27,9 @@ const Itemdetail = ({producto}) => {
                 <option value="saab">M</option>
                 <option value="fiat">L</option>
               </select>
-              <h4>Cantidad:{cantidad}</h4>
+              
               {
-                cantidad === 0 ? <Itemcount stock={producto.stock} initial={0} onAdd={onAdd}/> : <button><Link to='/carrito'>Terminar compra</Link></button>
+               !duplicado(producto.id)? <Itemcount stock={producto.stock} initial={0} onAdd={agregarcarrito}/> : <button>Terminar compra</button>
               }
              
               <div class="description">

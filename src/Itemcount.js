@@ -11,9 +11,9 @@ const Itemcount = ({stock, initial, onAdd}) =>{
             setContador(contador - 1)
         }
     }
-    const confirmarcontador = () =>{
-        onAdd(contador);
-    }
+    //const confirmarcontador = () =>{
+        //onAdd(contador);
+    //}
 
     return(
         <>
@@ -24,7 +24,7 @@ const Itemcount = ({stock, initial, onAdd}) =>{
             <button onClick={disminuircontador}>-</button>
             </div>
             <div>
-                <button onClick={confirmarcontador}>Agregar Carrito</button>
+                <button onClick={onAdd}>Agregar Carrito</button>
             </div>
         </div>
         </>

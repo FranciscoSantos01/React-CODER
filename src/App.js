@@ -4,9 +4,11 @@ import Itemhomepage from "./components/Itemhomepage"
 import Header from "./Header"
 import Itemdetailcontainer from "./ItemDetailContainer.js/Itemdetailcontainer"
 import Itemlistcontainer from "./Itemlistcontainer"
+import { Contexto} from './components/Cartcontext'
 function App(){
     return(
         <BrowserRouter>
+        <Contexto>
         <Header />
         <Routes>
         <Route path='/' element={<Itemhomepage />}/>
@@ -15,7 +17,7 @@ function App(){
         <Route path='/detail/:id' element={<Itemdetailcontainer />}/>
         <Route path='/catalogo/:category' element={<Itemlistcontainer />}/>
         </Routes>
-        
+        </Contexto>
         </BrowserRouter>
     
     )

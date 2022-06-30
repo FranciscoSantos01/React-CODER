@@ -1,9 +1,11 @@
 import{useContext} from 'react'
 import { Context} from './components/Cartcontext'
+import {Link} from 'react-router-dom'
 function Cart(){
-  const carrito = useContext(Context)
+  const { cantidad_total} = useContext(Context)
+
     return(
-      <i class="fa-solid fa-cart-shopping">{carrito.cantidad_total}</i>
+      <Link to={'/carrito'}><i class="fa-solid fa-cart-shopping">{cantidad_total}</i></Link>
     )
 }
 

@@ -1,18 +1,20 @@
 import React from 'react'
-//import { useState } from 'react'
+import { useState } from 'react'
 //import {Link} from 'react-router-dom'
 import Itemcount from '../Itemcount'
 import{useContext} from 'react'
 import { Context } from '../components/Cartcontext'
 
 const Itemdetail = ({producto}) => {
- //const[cantidad,setCantidad]= useState(0)
- const {agregarProducto, duplicado} = useContext(Context)
-  const agregarcarrito =()=>{
-    const item = {
-      ...producto,
-    }
-    agregarProducto(item)
+  const {agregarProducto, duplicado, cantidad1} = useContext(Context)
+  const[cantidad,setCantidad]= useState(0)
+  const onAdd =(cantidad)=>{
+    setCantidad(cantidad);
+    agregarProducto(producto, cantidad);
+    cantidad1(cantidad);
+    console.log(`agregado al carrito: x${cantidad} ${producto.nombre}`)
+    
+    
   }
   
   return (
@@ -27,9 +29,9 @@ const Itemdetail = ({producto}) => {
                 <option value="saab">M</option>
                 <option value="fiat">L</option>
               </select>
-              
+              <h4>Cantidad:{cantidad}</h4>
               {
-               !duplicado(producto.id)? <Itemcount stock={producto.stock} initial={0} onAdd={agregarcarrito}/> : <button>Terminar compra</button>
+               !duplicado(producto.id)  ? <Itemcount stock={producto.stock} initial={0} onAdd={onAdd}/> : <button>Terminar compra</button>
               }
              
               <div class="description">

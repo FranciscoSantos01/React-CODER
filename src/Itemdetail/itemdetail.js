@@ -31,6 +31,7 @@ const Itemdetail = ({producto}) => {
               </select>
               <h4>Cantidad:{cantidad}</h4>
               {
+              
                !duplicado(producto.id)  ? <Itemcount stock={producto.stock} initial={0} onAdd={onAdd}/> : <button>Terminar compra</button>
               }
              

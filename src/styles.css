@@ -278,3 +278,11 @@ header{
     width: 200px;
     
 }
+
+
+/* carrito -------------------------------- */
+.carrito{
+    display: flex;
+    gap: 40px;
+    flex-wrap: wrap;
+}

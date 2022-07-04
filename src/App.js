@@ -6,6 +6,11 @@ import Itemdetailcontainer from "./ItemDetailContainer.js/Itemdetailcontainer"
 import Itemlistcontainer from "./Itemlistcontainer"
 import { Contexto} from './components/Cartcontext'
 import Cart from "./components/Cart"
+import productos from "./utils/productos"
+import { addDoc } from "firebase/firestore"
+import { collectionProd } from "./components/Firebase"
+
+//productos.map((product)=> addDoc(collectionProd, product));
 function App(){
     return(
         <BrowserRouter>

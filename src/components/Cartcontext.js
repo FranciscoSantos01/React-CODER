@@ -29,20 +29,14 @@ export const Contexto = ({children})=>{
     const cantidad1 = (cantidad)=>{
         setAmount(cantidad)
     }
-    const eliminarProduct = (name) =>{
-        const spread = [...carrito];
-        setCarrito( spread.find(nombre=>{
-         if(nombre.nombre === name){
-               let index= spread.findIndex(name);
-                delete spread[index];
-            }
-         })) 
-        
-        
-        
+    const eliminarProduct = (id) =>{
+        setCarrito(carrito.filter((prod)=> prod.id !== id));
     }
         
-    
+    const vaciarCarrito = ()=>{
+        const cart =  []
+        setCarrito(cart);
+    }
     
     const Carro = {
         carrito,
@@ -51,9 +45,8 @@ export const Contexto = ({children})=>{
         agregarProducto,
         duplicado,
         cantidad1,
-        eliminarProduct
-       
-      
+        eliminarProduct,
+        vaciarCarrito
         
     }
     console.log(carrito)

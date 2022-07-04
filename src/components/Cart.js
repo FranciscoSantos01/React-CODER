@@ -5,7 +5,7 @@ import Cartitem from './Cartitem'
 import {Link} from 'react-router-dom'
 
 const Cart = () => {
-  const {carrito} = useContext(Context)
+  const {carrito, vaciarCarrito} = useContext(Context)
   if(carrito.length === 0){
     return(
       <div>
@@ -16,10 +16,11 @@ const Cart = () => {
     )
   }
   return (
-    <section>
+    <section className='carrito'>
       {
         carrito.map((item)=><Cartitem producto={item}/>)
       }
+      <button onClick={vaciarCarrito}>Vaciar Carrito</button>
     </section>
   )
 }

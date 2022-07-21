@@ -15,7 +15,6 @@ function Header (){
                 
             </div>
             <div className="navbutt">
-                <button>Log in</button>
                 <Cart />
             </div>
         </header>

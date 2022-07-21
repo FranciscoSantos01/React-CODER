@@ -6,9 +6,10 @@ import Itemdetailcontainer from "./ItemDetailContainer.js/Itemdetailcontainer"
 import Itemlistcontainer from "./Itemlistcontainer"
 import { Contexto} from './components/Cartcontext'
 import Cart from "./components/Cart"
-import productos from "./utils/productos"
-import { addDoc } from "firebase/firestore"
-import { collectionProd } from "./components/Firebase"
+import Footer from "./components/Footer"
+//import productos from "./utils/productos"
+//import { addDoc } from "firebase/firestore"
+//import { collectionProd } from "./components/Firebase"
 
 //productos.map((product)=> addDoc(collectionProd, product));
 function App(){
@@ -16,6 +17,7 @@ function App(){
         <BrowserRouter>
         <Contexto>
         <Header />
+        
         <Routes>
         <Route path='/' element={<Itemhomepage />}/>
         <Route path='/catalogo' element={<Itemlistcontainer />}/>
@@ -24,6 +26,7 @@ function App(){
         <Route path='/catalogo/:category' element={<Itemlistcontainer />}/>
         <Route path= '/carrito' element={<Cart />}/>
         </Routes>
+        <Footer />
         </Contexto>
         </BrowserRouter>
     

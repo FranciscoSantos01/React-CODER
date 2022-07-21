@@ -3,9 +3,7 @@ import ReactDOM from 'react-dom/client';
 
 import App from './App';
 import './styles.css'
-/*function App(){
-  return "Hola mundo"
-}*/
+
 
 
 const root = ReactDOM.createRoot(document.getElementById('root'));

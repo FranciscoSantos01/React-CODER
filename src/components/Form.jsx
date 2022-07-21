@@ -10,6 +10,7 @@ const Form = ({handleChange, data, handleSubmit}) => {
                     name="name"
                     onChange={handleChange}
                     value = {data.name}
+                    required
                    
                 /> <br />
                 <input
@@ -17,7 +18,8 @@ const Form = ({handleChange, data, handleSubmit}) => {
                     type="email"
                     name="email"
                     onChange={handleChange}
-                    value = {data.name}
+                    value = {data.email}
+                    required
                    
                    
                 /> <br />
@@ -26,7 +28,8 @@ const Form = ({handleChange, data, handleSubmit}) => {
                     type="number"
                     name="phone"
                     onChange={handleChange}
-                    value = {data.name}
+                    value = {data.phone}
+                    required
                    
                    
                 /> <br />

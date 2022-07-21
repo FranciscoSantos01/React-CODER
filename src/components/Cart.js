@@ -10,7 +10,7 @@ import Form from './Form'
 
 
 const Cart = () => {
-  const {carrito, vaciarCarrito} = useContext(Context)
+  const {carrito, vaciarCarrito, precio_total} = useContext(Context)
   const [data , setData] = useState({ name: '', email: '', phone: '' });
   const [orderId, setOrderId] = useState("");
 
@@ -26,10 +26,11 @@ const handleSubmit = (e)=>{
   const objOrden = {
     buyer: {
         name: data.name,
-        phone: data.phone,
         email: data.email,
+        phone: data.phone,
     },
     carrito,
+    precio_total,
     date: serverTimestamp(),
 };
 
@@ -40,7 +41,12 @@ addDoc(ref, objOrden).then((response) => {
 });
 };
 if (orderId !== '') {
-  return <h1>Gracias por tu compra, tu número de envío es: {orderId}</h1>;
+  return (
+  <div>
+  <h1>Gracias por tu compra, tu número de envío es: {orderId}</h1>;
+  <Link to={'/'}><button className='buttonClass'>Volver a inicio</button></Link>
+  </div>
+  )
 }
 return(
   <>
@@ -53,7 +59,9 @@ return(
       {
         carrito.map((item)=><Cartitem producto={item}/>)
       }
+      <h3>Monto:{precio_total}</h3>
       <button onClick={vaciarCarrito}>Vaciar Carrito</button>
+      
     </section>
     <section >
     <Form

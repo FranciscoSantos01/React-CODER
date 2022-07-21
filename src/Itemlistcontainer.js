@@ -4,8 +4,10 @@ import {Link} from 'react-router-dom'
 import { getDocs, query, where } from 'firebase/firestore';
 import { collectionProd } from "./components/Firebase";
 import Itemlist from "./Itemlist"
+import { ProductLoader } from "./utils/Product_loader"
 function Itemlistcontainer(){
     const[item, setItems] = useState([])
+    const [loading, setLoading] = useState(true)
     const{category} = useParams();
     useEffect(()=>{
         const ref = category
@@ -20,6 +22,7 @@ function Itemlistcontainer(){
             };
           });
           setItems(products);
+          setLoading(false)
         })
     
       }, [category] )
@@ -31,7 +34,7 @@ function Itemlistcontainer(){
                 <button><Link to='/catalogo/Hoodies'>Hoodies</Link></button>
             </section>
             <div className="flex-1">
-                <Itemlist producto={item} />
+                { loading ? <ProductLoader /> :<Itemlist producto={item} />}
             </div>
             
         </div>

@@ -8,7 +8,7 @@ export const Items = ({id,image ,nombre, price,stock}) => {
      
     <div className="card" key={id}>
         <img src={image} alt={nombre} />
-        <div class="card-1">
+        <div className="card-1">
         <h3>{nombre}</h3>
         <span>${price}</span>
         </div>

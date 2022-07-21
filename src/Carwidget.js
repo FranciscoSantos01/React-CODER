@@ -2,10 +2,10 @@ import{useContext} from 'react'
 import { Context} from './components/Cartcontext'
 import {Link} from 'react-router-dom'
 function Cart(){
-  const { cantidad_total} = useContext(Context)
+  const {cantidad_total} = useContext(Context)
 
     return(
-      <Link to={'/carrito'}><i class="fa-solid fa-cart-shopping">{cantidad_total}</i></Link>
+      <Link to={'/carrito'}><i className="fa-solid fa-cart-shopping">{cantidad_total}</i></Link>
     )
 }
 

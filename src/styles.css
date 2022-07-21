@@ -22,6 +22,8 @@ header{
 .navbar{
     margin-top: 20px;
     padding-right: 5px;
+    align-content: center;
+    margin-right: 20px;
 }
 .navbar a{
     text-decoration: none;
@@ -36,6 +38,7 @@ header{
 
 }
 .navbutt{
+    align-self: center;
     padding: 10px;
 }
 .navbutt button{
@@ -286,4 +289,103 @@ header{
     gap: 40px;
     flex-wrap: wrap;
 }
+.buttonClass {
+    font-size:15px;
+    font-family:Arial;
+    width:117px;
+    height:43px;
+    border-width:1px;
+    color:#fff;
+    border-color:#18ab29;
+    border-top-left-radius:28px;
+    border-top-right-radius:28px;
+    border-bottom-left-radius:28px;
+    border-bottom-right-radius:28px;
+    text-shadow: 1px 1px 6px #2f6627;
+    background:rgba(208, 2, 27, 1);
+  };
+  
+  .buttonClass:hover {
+    background: rgba(48, 56, 45, 1)
+  };
 
+/* loaderr------------------ */
+.center{
+   display: flex;
+   flex-direction: row;
+   justify-content: center;
+}
+.columns{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+    gap: 20px;
+    padding-top: 15px ;
+}
+.products-container {
+   display: flex;
+   flex-direction: row;
+   flex-wrap: wrap;
+   gap: 100px;
+  }
+
+
+  /* -----FOOTERRR----------- */
+  footer{
+    background-color:#26272b;
+    height: 50vh;
+    margin-top: 30px;
+
+}
+footer h1{
+    color: white;
+}
+
+.side-footer{
+    color: white;
+    display: flex;
+    justify-content: space-evenly;
+    border-bottom: 2px solid white;
+    
+    
+}
+
+.side-1{
+    width: 300px;
+    margin-top: 10px;
+}
+.side-1 p{
+    color: lightgray;
+
+}
+
+.side-2 p{
+     font-weight: bold; 
+     width: 195px;
+     margin-top: 25px;
+}
+
+.side-3{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+}
+.side-3 p{
+    font-size: 20px;
+    
+}
+
+  a:hover{
+    color: red;
+  }
+.footer{
+    text-align: center;
+}
+
+.footer h2{
+    color:whitesmoke;
+    font-size: 20px;
+}

@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import{useContext} from 'react'
-import { Context } from '../components/Cartcontext'
+import { Context } from './Cartcontext'
 import Cartitem from './Cartitem'
 import {Link} from 'react-router-dom'
 import { db } from './Firebase'

@@ -1,5 +1,5 @@
 import{useContext} from 'react'
-import { Context} from './components/Cartcontext'
+import { Context} from './Cartcontext'
 import {Link} from 'react-router-dom'
 function Cart(){
   const {cantidad_total} = useContext(Context)

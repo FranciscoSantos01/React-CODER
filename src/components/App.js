@@ -1,12 +1,12 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom"
-import Itemcontact from "./components/Itemcontact"
-import Itemhomepage from "./components/Itemhomepage"
+import Itemcontact from "./Itemcontact"
+import Itemhomepage from "./Itemhomepage"
 import Header from "./Header"
-import Itemdetailcontainer from "./ItemDetailContainer.js/Itemdetailcontainer"
+import Itemdetailcontainer from "../ItemDetailContainer.js/Itemdetailcontainer"
 import Itemlistcontainer from "./Itemlistcontainer"
-import { Contexto} from './components/Cartcontext'
-import Cart from "./components/Cart"
-import Footer from "./components/Footer"
+import { Contexto} from './Cartcontext'
+import Cart from "./Cart"
+import Footer from "./Footer"
 //import productos from "./utils/productos"
 //import { addDoc } from "firebase/firestore"
 //import { collectionProd } from "./components/Firebase"

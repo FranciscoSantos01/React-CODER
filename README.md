@@ -7,6 +7,7 @@
 * **Profesor**: Horacion Gutierrez Estevez
 * **Tutor**: Pilar Figueroa
 * **Desarrollado por**: Francisco Santos
+* **Proyecto Final**: [https://react-coderhouse-eight.vercel.app/](https://react-coderhouse-eight.vercel.app/)
 
 ##Proyecto
 ***
@@ -25,7 +26,7 @@ PD: Se centro mas en la funcionabilidad de las cosas mas que en el diseño
 ###Librearias y Frameworks
 * **Node.js**
 * **React**
-
+* **React-router-dom**: para hacer spa
 ###Base de datos
 * **Firestore**
 ###Gestor de paquetes
@@ -33,4 +34,19 @@ PD: Se centro mas en la funcionabilidad de las cosas mas que en el diseño
 ###Control de Versiones
 * **git**
 
+##Gif/Video
+* **Youtube link**: [Demo](https://youtu.be/I18HLnWFLbk)
+
+##Instalar
+*Git clone https://github.com/FranciscoSantos01/React-CODER.git
+* cd react-CODER
+* npm install
+*npm start
+
+###Documentacion React:
+* Acceder a [https://reactjs.org/docs/getting-started.html](https://reactjs.org/docs/getting-started.html)
+*[https://v5.reactrouter.com/web/guides/quick-start](https://v5.reactrouter.com/web/guides/quick-start)
+##Autor
+* Github codigo: [FranciscoSantos01](https://github.com/FranciscoSantos01/React-CODER)
+* Linkedin: [FranciscoSantos](https://www.linkedin.com/in/francisco-santos-a6973a1ab/)
 

@@ -27,10 +27,13 @@ PD: Se centro mas en la funcionabilidad de las cosas mas que en el diseño
 * **Node.js**
 * **React**
 * **React-router-dom**: para hacer spa
+
 ###Base de datos
 * **Firestore**
+
 ###Gestor de paquetes
 * **npm**
+
 ###Control de Versiones
 * **git**
 

@@ -41,6 +41,7 @@ PD: Se centro mas en la funcionabilidad de las cosas mas que en el diseño
 * **Youtube link**: [Demo](https://youtu.be/I18HLnWFLbk)
 
 ##Instalar
+
 *Git clone https://github.com/FranciscoSantos01/React-CODER.git
 * cd react-CODER
 * npm install
@@ -48,7 +49,9 @@ PD: Se centro mas en la funcionabilidad de las cosas mas que en el diseño
 
 ###Documentacion React:
 * Acceder a [https://reactjs.org/docs/getting-started.html](https://reactjs.org/docs/getting-started.html)
+
 *[https://v5.reactrouter.com/web/guides/quick-start](https://v5.reactrouter.com/web/guides/quick-start)
+
 ##Autor
 * Github codigo: [FranciscoSantos01](https://github.com/FranciscoSantos01/React-CODER)
 * Linkedin: [FranciscoSantos](https://www.linkedin.com/in/francisco-santos-a6973a1ab/)

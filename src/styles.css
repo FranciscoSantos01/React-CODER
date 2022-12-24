@@ -6,23 +6,28 @@
 header{
     background-color: black;
     color: white;
+}
+.header{
     display: flex;
     flex-direction: row;
-    justify-content: space-around;
-    height: 10vh;
+    justify-content: space-between;
+    padding: 2rem;
 }
 .Title{
-    padding: 10px;
+    padding: 5px;
+  
     
+}
+.Title a{
+    text-decoration: none;
+    color: white;
 }
 .Title h1{
      font-size: 45px;
      font-family:'Bebas Neue', cursive;
 }
 .navbar{
-    margin-top: 20px;
     padding-right: 5px;
-    align-content: center;
     margin-right: 20px;
 }
 .navbar a{
@@ -37,18 +42,22 @@ header{
     color: red;
 
 }
-.navbutt{
-    align-self: center;
-    padding: 10px;
+.nav2{
+    display: none;
 }
-.navbutt button{
-    padding: 10px;
-    background-color: red;
-    color: white;
-    border-radius: 15px;
-    text-transform: uppercase;
-    font-weight: bold;
-
+.fa-bars{
+    display: none;
+}
+.nav  p{
+    display: none;
+}
+.nav1{
+    display: none;
+}
+.navbutt{
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .counter{
@@ -56,16 +65,15 @@ header{
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    margin-top: 10px;
     padding: 15px;
 }
- .counter button{
+ /* .counter button{
         padding: 10px;
         background-color: rgb(144, 0, 255);
         width: 150px;
         color: white;
         font-weight: bold;
-}
+} */
 .counter button:active{
     background-color: black;
 }
@@ -73,11 +81,13 @@ header{
     display: flex;
     flex-direction: row;
     justify-content: center;
+    gap: 5px;
+    margin-bottom: 5px;
 }
 .counter1 h2{
-    margin-top: 10px;
+  align-self: center;
 }
-.counter1 button{
+/* .counter1 button{
     padding: 7px;
     background-color: black;
     color: white;
@@ -86,158 +96,22 @@ header{
 }
 .counter1 button:hover{
     background-color: violet;
-}
+} */
 
-.card{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 300px;
-    background-color: white;
-    margin-top: 10px;
-    margin-bottom: 20px;
-    border: 2px black solid;
-    border-radius: 10px;
-}
-.card button{
-    padding: 7px 14px;
-    background-color: black;
-    color: white;
-    border-radius: 10px;
-    margin-bottom: 10px;
-}
 
-.card-1{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
-    align-items: center;
-}
-.card-1 h3{
-    margin-right: 40px;
-}
 
-.flex-1{
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: space-evenly;
-    width: 1000px;
-    margin-left: 100px;
-    margin-top: 50px;
-}
-.boton{
-    display: flex;
-    justify-content: center;
-    margin-top: 20px;
-}
-.boton button{
-        padding: 10px 14px;
-        border-radius: 15px;
-        background-color: bisque;
-        font-size: 18px;
-        margin-right: 10px;   
-}
 .btn:hover{
        background-color: red;
        color: white;
 }
 
-.detail{
-    display: flex;
-    justify-content: center;
-    gap: 150px;
-    padding: 20px;
-    margin-top: 50px;
 
-}
-.detail img{
-    width: 300px;
-    border-radius: 15px;
-}
-
-.detail-card{
-    display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
-
-    width: 300px;
-}
-
-.detail-card h2{
-    font-size: 35px;
-    font-weight: bolder;
-    text-transform: capitalize;
-}
-.detail-card span{
-        font-weight: bold;
-        font-size: 25px;
-        margin-bottom: 15px;
-}
-.detail-card label{
-    text-transform: uppercase;
-    margin-top: 20px;
-}
-.detail-card select{
-    width: 140px;
-    padding: 10px;
-    
-    border-radius: 10px;
-}
-
-.description{
-    margin-top: 15px;
-}
-.description h3{
-     font-size: 18px;
-
-}
-.description p{
-    text-align: justify;
-}
 
 /* Contact styles --------------------------------*/
 
-.forms{
-    display: flex;
-    justify-content: center;
-    margin-top: 100px;
-    border-radius: 20px;
-    gap: 150px;
-    margin-left: 50px;
-}
-.forms img{
-    width: 400px;
-    margin-bottom: 20px;
-    margin-top: 25px;
-    
-}
-
-.form{
-    display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
-    margin-top: 20px;
-}
-.form input{
-    padding: 10px 5px;
-    border-radius: 12px;
-    border: none;
-    background-color: lightgray;
-    margin-bottom: 15px;
-}
-.form textarea{
-    border-radius: 12px;
-    background-color: lightgray;
-}
-.submit{
-    padding: 10px 9px;
-    border-radius: 12px;
-    background-color: blueviolet;
+.fa-xmark{
     color: white;
-    margin-top: 15px;
-    margin-bottom: 20px;
-    font-size: 20px;
+    font-size: 30px;
 }
 
 /* Home page----------------------- */
@@ -272,7 +146,7 @@ header{
    
     
 }
-.intro-2 button{
+/* .intro-2 button{
     padding: 10px 7px;
     background-color: red;
     color: white;
@@ -280,7 +154,7 @@ header{
     border-radius: 15px;
     width: 200px;
     
-}
+} */
 
 
 /* carrito -------------------------------- */
@@ -288,6 +162,7 @@ header{
     display: flex;
     gap: 40px;
     flex-wrap: wrap;
+    padding: 1.5rem;
 }
 .buttonClass {
     font-size:15px;
@@ -319,7 +194,6 @@ header{
     display: flex;
     flex-direction: column;
     align-items: center;
-    
     gap: 20px;
     padding-top: 15px ;
 }
@@ -334,7 +208,7 @@ header{
   /* -----FOOTERRR----------- */
   footer{
     background-color:#26272b;
-    height: 50vh;
+    height: 10vh;
     margin-top: 30px;
 
 }
@@ -389,3 +263,208 @@ footer h1{
     color:whitesmoke;
     font-size: 20px;
 }
+.confirm{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+    gap: 20px;
+}
+.confirm span{
+    text-decoration: underline;
+}
+.fa-circle-check{
+    font-size: 70px;
+    color: rgb(14, 129, 14);
+}
+@media screen and (min-width: 360px) and (max-width: 390px) { 
+    .Title{
+        padding: 0px;
+    
+    }
+    .navbar{
+        display: none;
+    }
+    
+    .Title h1 {
+        font-size: 35px;
+    }
+    .fa-bars{
+        display: block;
+        font-size: 30px;
+    }
+    .nav1{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: flex-start;
+        gap: 15px;
+        padding: 0.5rem;
+        
+    }
+    .nav1 a{
+        text-decoration: none;
+        color: white;
+    }
+    .nav2{
+        display: flex;
+    justify-content: center;
+    align-items: center;
+    }
+    .intro{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 50px;
+        width: 250px;
+        border-radius: 18px;
+        margin-left: 0px;
+        margin-top: 0px;
+    }
+    .intro img{
+        width: 200px;
+    }
+  
+    .intro-2 h2{
+        font-size: 35px;
+        font-weight: bolder;
+        text-align: center;
+        align-self: flex-start;
+        width: 350px;
+        margin-right: 0px;
+        
+    }
+    .intro-2 div{
+        display: flex;
+        justify-content: center;
+        
+    }
+    .intro-2 p{
+        font-size: 20px;
+        text-align: flex-start;
+        width: 330px;
+    }
+    .intro2 button{
+        align-self: center;
+    }
+    .products-container {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 100px;
+       }
+       .carrito{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 15px;
+        padding: 1.5rem;
+    }
+    .confirm h3{
+       text-align: center;
+       font-size: 25px;
+    }
+    .confirm{
+        margin-bottom: 290px;
+    }
+    
+  }
+
+  @media screen and (min-width: 402px) and (max-width: 540px) {
+    .Title{
+        padding: 0px;
+    
+    }
+    .navbar{
+        display: none;
+    }
+    
+    .Title h1 {
+        font-size: 35px;
+    }
+    .fa-bars{
+        display: block;
+        font-size: 30px;
+    }
+    .nav1{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: flex-start;
+        gap: 15px;
+        padding: 0.5rem;
+        
+    }
+    .nav1 a{
+        text-decoration: none;
+        color: white;
+    }
+    .nav2{
+        display: flex;
+    justify-content: center;
+    align-items: center;
+    }
+    .intro{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 50px;
+        width: 250px;
+        border-radius: 18px;
+        margin-left: 0px;
+        margin-top: 0px;
+        margin-bottom: 20px;
+    }
+    .intro img{
+        width: 200px;
+    }
+  
+    .intro-2 h2{
+        font-size: 35px;
+        font-weight: bolder;
+        text-align: center;
+        align-self: flex-start;
+        width: 350px;
+        margin-right: 0px;
+        
+    }
+    .intro-2 p{
+        font-size: 20px;
+        text-align: flex-start;
+        width: 330px;
+    }
+    .intro-2 div{
+        display: flex;
+        justify-content: center;
+        
+    }
+    .products-container {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 100px;
+       }
+       .carrito{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 15px;
+        padding: 1.5rem;
+    }
+    .confirm h3{
+       text-align: center;
+       font-size: 25px;
+    }
+    .confirm{
+        margin-bottom: 290px;
+    }
+  }

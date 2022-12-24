@@ -24,9 +24,9 @@ const Itemdetailcontainer = () => {
   }, [id] )
 
   return(
-    <div>
+    <>
       {loading ? <SkeletonCard /> : <Itemdetail producto={product}/>}
-    </div>
+    </>
   )
 }
 

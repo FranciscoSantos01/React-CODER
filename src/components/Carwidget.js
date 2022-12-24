@@ -5,7 +5,7 @@ function Cart(){
   const {cantidad_total} = useContext(Context)
 
     return(
-      <Link to={'/carrito'}><i className="fa-solid fa-cart-shopping">{cantidad_total}</i></Link>
+      <Link to={'/carrito'}><i style={{alignSelf:"center"}} className="fa-solid fa-cart-shopping">{cantidad_total}</i></Link>
     )
 }
 

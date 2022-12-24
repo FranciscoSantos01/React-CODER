@@ -1,0 +1,111 @@
+.detail{
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+    padding: 20px;
+    margin-top: 50px;
+    width: 80%;
+    height: fit-content;
+
+}
+.detail img{
+    width: 300px;
+    height: 350px;
+    border-radius: 15px;
+}
+
+.detail-card{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    width: 300px;
+}
+.detail-card h4{
+    text-align: start;
+    margin-left: 13px;
+}
+
+.detail-card h2{
+    font-size: 35px;
+    font-weight: bolder;
+    text-transform: capitalize;
+}
+.detail-card span{
+        font-weight: bold;
+        font-size: 25px;
+}
+.detail-card label{
+    text-transform: uppercase;
+}
+.detail-card select{
+    width: 140px;
+    padding: 10px;
+    
+    border-radius: 10px;
+}
+
+
+.description h3{
+     font-size: 18px;
+
+}
+.description p{
+    text-align: justify;
+    width: 450px;
+}
+
+@media screen and (min-width:350px) and (max-width:400px) {
+    .detail{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 20px;
+        padding: 20px;
+        margin-top: 20px;
+        width: 80%;
+        height: fit-content;
+        margin: 20px auto;
+    }
+    .detail-card{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+        gap: 5px;
+        width: 300px;
+    }
+    .description p{
+        text-align: flex-start;
+        width: 310px;
+    }
+    
+}
+
+@media screen and (min-width: 402px) and (max-width: 540px) {
+    .detail{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 20px;
+        padding: 20px;
+        margin-top: 20px;
+        width: 80%;
+        height: fit-content;
+        margin: 20px auto;
+    }
+    .detail-card{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+        gap: 5px;
+        width: 300px;
+    }
+    .description p{
+        text-align: flex-start;
+        width: 310px;
+    }
+    
+}

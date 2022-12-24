@@ -2,9 +2,10 @@ import React from 'react'
 
 const Form = ({handleChange, data, handleSubmit}) => {
   return (
-    <div className='form'>
+    <div className='d-flex justify-content-center mt-3' >
          <form onSubmit={handleSubmit}>
                 <input
+                   className='form-control w-100'
                     placeholder="Nombre"
                     type="text"
                     name="name"
@@ -14,6 +15,7 @@ const Form = ({handleChange, data, handleSubmit}) => {
                    
                 /> <br />
                 <input
+                  className='form-control  w-100'
                     placeholder="Email"
                     type="email"
                     name="email"
@@ -24,6 +26,7 @@ const Form = ({handleChange, data, handleSubmit}) => {
                    
                 /> <br />
                 <input
+                  className='form-control w-100'
                     placeholder="Telefono"
                     type="number"
                     name="phone"
@@ -33,7 +36,9 @@ const Form = ({handleChange, data, handleSubmit}) => {
                    
                    
                 /> <br />
-                <button>Finalizar compra</button>
+                <div className='d-flex justify-content-center align-items-center'>
+                <button className='btn btn-dark'>Finalizar compra</button>
+                </div>
             </form>
     </div>
   )

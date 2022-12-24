@@ -1,12 +1,12 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom"
-import Itemcontact from "./Itemcontact"
-import Itemhomepage from "./Itemhomepage"
+
 import Header from "./Header"
 import Itemdetailcontainer from "../ItemDetailContainer.js/Itemdetailcontainer"
-import Itemlistcontainer from "./Itemlistcontainer"
+
 import { Contexto} from './Cartcontext'
 import Cart from "./Cart"
 import Footer from "./Footer"
+import { Home, Catalogo, Contact } from "../screens"
 //import productos from "./utils/productos"
 //import { addDoc } from "firebase/firestore"
 //import { collectionProd } from "./components/Firebase"
@@ -19,11 +19,11 @@ function App(){
         <Header />
         
         <Routes>
-        <Route path='/' element={<Itemhomepage />}/>
-        <Route path='/catalogo' element={<Itemlistcontainer />}/>
-        <Route path='/contacto' element={<Itemcontact />}/>
+        <Route path='/' element={<Home />}/>
+        <Route path='/catalogo' element={<Catalogo />}/>
+        <Route path='/contacto' element={<Contact />}/>
         <Route path='/detail/:id' element={<Itemdetailcontainer />}/>
-        <Route path='/catalogo/:category' element={<Itemlistcontainer />}/>
+        <Route path='/catalogo/:category' element={<Catalogo />}/>
         <Route path= '/carrito' element={<Cart />}/>
         </Routes>
         <Footer />

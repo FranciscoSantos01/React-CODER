@@ -4,6 +4,7 @@ import {Link} from 'react-router-dom'
 import Itemcount from '../components/Itemcount'
 import{useContext} from 'react'
 import { Context } from '../components/Cartcontext'
+import './detail.css'
 
 const Itemdetail = ({producto}) => {
   const {agregarProducto, duplicado, cantidad1,} = useContext(Context)
@@ -21,18 +22,14 @@ const Itemdetail = ({producto}) => {
     <section className="detail">
         <img src={producto.image} alt={producto.nombre} />
         <div className="detail-card">
+          <div className='d-flex justify-content-center align-items-center gap-4'>
             <h2>{producto.nombre}</h2>
             <span>${producto.price}</span>
-            <label >Talle:</label>
-            <select id="size" name="size">
-                <option value="volvo">S</option>
-                <option value="saab">M</option>
-                <option value="fiat">L</option>
-              </select>
+          </div>
               <h4>Cantidad:{cantidad}</h4>
               {
               
-               !duplicado(producto.id)  ? <Itemcount stock={producto.stock} initial={0} onAdd={onAdd}/> : <Link to='/carrito'><button>Terminar compra</button></Link>
+               !duplicado(producto.id)  ? <Itemcount stock={producto.stock} initial={0} onAdd={onAdd}/> : <Link to='/carrito'><button className='btn btn-dark'>Terminar compra</button></Link>
               }
              
               <div className="description">

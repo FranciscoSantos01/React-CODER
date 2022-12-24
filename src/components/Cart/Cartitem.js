@@ -1,6 +1,7 @@
 import React from 'react'
 import{useContext} from 'react'
-import { Context } from '../components/Cartcontext'
+import { Context } from '../Cartcontext'
+import './cart.css'
 const Cartitem = ({producto}) => {
   const{eliminarProduct}= useContext(Context)
   const total = ()=>{
@@ -17,11 +18,13 @@ const Cartitem = ({producto}) => {
  
   
   return (
-    <div key={producto.id}>
+    <div key={producto.id} className="cartItem">
       <img src={producto.image} alt={producto.nombre} />
+      <div>
       <h3>{producto.nombre}</h3>
       <span>Total:{total()}</span> 
-      <button onClick={()=>addDelete()}>Remove</button>
+      <button onClick={()=>addDelete()} className="btn btn-danger w-75"><i class="fa-solid fa-trash"></i></button>
+      </div>
     </div>
   )
 }

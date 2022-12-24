@@ -1,11 +1,12 @@
 import React, { useState } from 'react'
 import{useContext} from 'react'
 import { Context } from './Cartcontext'
-import Cartitem from './Cartitem'
+import Cartitem from './Cart/Cartitem'
 import {Link} from 'react-router-dom'
 import { db } from './Firebase'
 import { addDoc, collection, serverTimestamp } from 'firebase/firestore';
 import Form from './Form'
+import { EmptyCart } from './Cart/EmptyCart'
 //import Form from './Form'
 
 
@@ -42,26 +43,28 @@ addDoc(ref, objOrden).then((response) => {
 };
 if (orderId !== '') {
   return (
-  <div>
-  <h1>Gracias por tu compra, tu número de envío es: {orderId}</h1>;
-  <Link to={'/'}><button className='buttonClass'>Volver a inicio</button></Link>
+  <div className='confirm'>
+  <h2>Tu compra fue exitosa</h2>
+  <i className="fa-solid fa-circle-check"></i>
+  <h3>tu número de envío es: <span>{orderId}</span></h3>;
+  <Link to={'/'}><button className='btn btn-danger btn-lg'>Volver a inicio<i className="fa-solid fa-house"></i></button></Link>
   </div>
   )
 }
 return(
   <>
-  {carrito.length === 0 ? ( <div>
-      <h1>NO hay ningun producto todavia</h1>
-      <Link to={'/catalogo'}>Vovler al Catalogo</Link>
-      </div>):(
+  {carrito.length === 0 ? (<EmptyCart /> ):(
          <>
          <section className='carrito'>
       {
         carrito.map((item)=><Cartitem producto={item}/>)
-      }
-      <h3>Monto:{precio_total}</h3>
-      <button onClick={vaciarCarrito}>Vaciar Carrito</button>
-      
+      }      
+    </section>
+    <section className='d-flex justify-content-center align-items-center'>
+      <div>
+      <h3>Monto:${precio_total}</h3>
+      <button onClick={vaciarCarrito} className="btn btn-danger">Vaciar Carrito <i class="fa-solid fa-cart-shopping"></i></button>
+      </div>
     </section>
     <section >
     <Form

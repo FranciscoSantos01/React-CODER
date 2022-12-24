@@ -2,9 +2,10 @@ import React, { useEffect, useState } from "react"
 import { useParams } from "react-router-dom"
 import {Link} from 'react-router-dom'
 import { getDocs, query, where } from 'firebase/firestore';
-import { collectionProd } from "./Firebase";
+import { collectionProd } from "../Firebase";
 import Itemlist from "./Itemlist"
-import { ProductLoader } from "../utils/Product_loader"
+import { ProductLoader } from "../../utils/Product_loader"
+import './catalogo.css'
 function Itemlistcontainer(){
     const[item, setItems] = useState([])
     const [loading, setLoading] = useState(true)

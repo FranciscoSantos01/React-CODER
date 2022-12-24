@@ -1,0 +1,145 @@
+.bg{
+    padding: 1rem;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 55px;
+}
+.forms{
+    display: flex;
+    justify-content: center;
+    margin: 50px, auto;
+    border-radius: 20px;
+    gap: 50px;
+    background-color: grey;
+    width: 80%;
+    height: 40%;
+    align-items: center;
+}
+.forms img{
+    padding: 0.5rem;
+    width: 450px;
+    height: 450px;
+}
+.forms h2{
+    color: white;
+    text-align: center;
+    font-size: 35px;
+    margin-bottom: 10px;
+}
+
+.form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-top: 20px;
+    padding: 0.5rem;
+    width: 35%;
+    height: 40%;
+}
+.form input{
+    padding: 10px 5px;
+    border-radius: 12px;
+    border: none;
+    background-color: lightgray;
+    margin-bottom: 15px;
+}
+.form textarea{
+    border-radius: 12px;
+    background-color: lightgray;
+}
+.submit{
+    padding: 7px 14px;
+    border-radius: 12px;
+    background-color: black;
+    color: white;
+    margin-top: 15px;
+    margin-bottom: 20px;
+    font-size: 20px;
+}
+@media screen and (min-width:350px) and (max-width: 400px) {
+    .forms{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        margin: 50px, auto;
+        border-radius: 20px;
+        gap: 10px;
+        background-color: grey;
+        width: 80%;
+        height: 40%;
+        align-items: center;
+    }
+    .forms img{
+        padding: 0.3rem;
+        width: 250px;
+        height: 250px;
+    }
+    .form{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin-top: 20px;
+        padding: 0.5rem;
+        width: 35%;
+        height: 40%;
+        gap: 5px;
+    }
+    .form textarea{
+        border-radius: 12px;
+        background-color: lightgray;
+        width: 200px;
+    }
+    .form input{
+        padding: 10px 5px;
+        border-radius: 12px;
+        border: none;
+        background-color: lightgray;
+        margin-bottom: 15px;
+        width: 200px;
+    }
+}
+
+@media screen and (min-width: 402px) and (max-width: 540px){
+    .forms{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        margin: 50px, auto;
+        border-radius: 20px;
+        gap: 10px;
+        background-color: grey;
+        width: 80%;
+        height: 40%;
+        align-items: center;
+    }
+    .forms img{
+        padding: 0.3rem;
+        width: 250px;
+        height: 250px;
+    }
+    .form{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin-top: 20px;
+        padding: 0.5rem;
+        width: 35%;
+        height: 40%;
+        gap: 5px;
+    }
+    .form textarea{
+        border-radius: 12px;
+        background-color: lightgray;
+        width: 200px;
+    }
+    .form input{
+        padding: 10px 5px;
+        border-radius: 12px;
+        border: none;
+        background-color: lightgray;
+        margin-bottom: 15px;
+        width: 200px;
+    }
+}
